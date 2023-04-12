@@ -2,10 +2,12 @@ import pandas as pd
 import numpy as np
 
 
-chat_id = 123456 # Ваш chat ID, не меняйте название переменной
+chat_id = 433193277 # Ваш chat ID, не меняйте название переменной
 
-def solution(...) -> bool: # Одна или две выборке на входе, заполняется исходя из условия
-    # Измените код этой функции
-    # Это будет вашим решением
-    # Не меняйте название функции и её аргументы
-    return ... # Ваш ответ, True или False
+def solution(x1: np.array) -> bool: 
+    result = ztest(x1, value = 500, alternative = 'larger')[1] 
+    
+    if result < 0.04:
+        return True
+    return False
+solution(x1)
